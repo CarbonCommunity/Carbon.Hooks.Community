@@ -18,8 +18,8 @@ public partial class Category_Entity
 
 		[MetadataAttribute.Info("Whenever a weapon was picked up from the rack.")]
 		[MetadataAttribute.Parameter("rack", typeof(WeaponRack))]
-		[MetadataAttribute.Parameter("slot", typeof(WeaponRackSlot))]
 		[MetadataAttribute.Parameter("item", typeof(Item))]
+		[MetadataAttribute.Parameter("slot", typeof(int))]
 
 		public class Entity_WeaponRack_218d76c79e534841b0eacf66932f1769 : Patch
 		{
