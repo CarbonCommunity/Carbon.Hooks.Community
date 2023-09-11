@@ -18,7 +18,8 @@ public partial class Category_Entity
 
 		[MetadataAttribute.Info("Returning a non-null value disallows all weapons to be picked up from the rack.")]
 		[MetadataAttribute.Parameter("rack", typeof(WeaponRack))]
-		[MetadataAttribute.Parameter("slot", typeof(WeaponRackSlot))]
+		[MetadataAttribute.Parameter("player", typeof(BasePlayer))]
+		[MetadataAttribute.Parameter("mountSlotIndex", typeof(int))]
 		[MetadataAttribute.Return(typeof(bool))]
 
 		public class Entity_WeaponRack_c1c6e670372c4566842af773ef81b971 : Patch
@@ -30,11 +31,9 @@ public partial class Category_Entity
 					return false;
 				}
 
-				var weaponAtIndex = __instance.GetWeaponAtIndex(mountSlotIndex);
-
-				if (HookCaller.CallStaticHook(2195047299, __instance, weaponAtIndex) != null)
+				if (HookCaller.CallStaticHook(2195047299, __instance, player, mountSlotIndex) is bool hookValue)
 				{
-					return false;
+					return hookValue;
 				}
 
 				return true;
