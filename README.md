@@ -7,6 +7,15 @@ Carbon is a self-updating, lightweight, intelligent mod loader for Rust utilizin
 
 Carbon has all the creature comforts you need to run your server, such as a permission system, user system, and so much more. Carbon is developed by experienced developers and server owners working to take the tedium out of hosting servers and make configuration and setup seamless with an integrated GUI in-game to manage everything!
 
+## How to Submit
+This project is open for PR requests. Publishing Harmony patches and hooks will go through a few validation tests before released as a Community hook update on production servers.
+
+To get started, fork this repository, make your changes following the pattern (and generating a GUID [using this](https://guidgenerator.com/) for the hook identification), commit, then we'll take it from there. 
+Please make sure to add documentation attributes, using the following whenever applicable:
+1. [**MetadataAttribute.Info**("This hook does this and that.")] - allowed multiple.
+1. [**MetadataAttribute.Parameter**("parameterName", typeof(ParameterType))] - allowed multiple.
+1. [**MetadataAttribute.Return**(typeof(ReturnType))] - optional. Don't add this if your hook is a void call.
+
 ## :package: Download
 Start using Carbon today, download the latest version from our [releases page][production].
 We also provide a [quick start script][quick-start] to get your server running in minutes, available for Windows and Linux.
