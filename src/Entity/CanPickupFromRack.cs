@@ -3,7 +3,7 @@ using static BaseEntity;
 
 /*
  *
- * Copyright (c) 2022-2023 Carbon Community 
+ * Copyright (c) 2022-2023 Carbon Community
  * All rights reserved.
  *
  */
@@ -15,7 +15,6 @@ public partial class Category_Entity
 	public partial class WeaponRack_Entity
 	{
 		[HookAttribute.Patch("CanPickupFromRack", "CanPickupFromRack", typeof(WeaponRack), "GivePlayerWeapon", new System.Type[] { typeof(BasePlayer), typeof(int), typeof(int), typeof(bool), typeof(bool) })]
-		[HookAttribute.Identifier("ca34645d39b24c328b84ce4efd4fdb34")]
 
 		[MetadataAttribute.Info("Returning a non-null value disallows the weapon to be picked up.")]
 		[MetadataAttribute.Parameter("rack", typeof(WeaponRack))]
@@ -26,7 +25,7 @@ public partial class Category_Entity
 		[MetadataAttribute.Parameter("tryHold", typeof(bool))]
 		[MetadataAttribute.Return(typeof(bool))]
 
-		public class Entity_WeaponRack_ca34645d39b24c328b84ce4efd4fdb34 : Patch
+		public class CanPickupFromRack : Patch
 		{
 			internal static bool _hasPickedUp;
 			internal static Item _currentItem;

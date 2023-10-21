@@ -4,7 +4,7 @@ using Random = UnityEngine.Random;
 
 /*
  *
- * Copyright (c) 2022-2023 Carbon Community 
+ * Copyright (c) 2022-2023 Carbon Community
  * All rights reserved.
  *
  */
@@ -17,14 +17,13 @@ public partial class Category_Resources
 	public partial class Resources_BaseRidableAnimal
 	{
 		[HookAttribute.Patch("OnHorseDung", "OnHorseDung", typeof(BaseRidableAnimal), "DoDung", new System.Type[] { })]
-		[HookAttribute.Identifier("e5beabfdc524496dbf5657149585bdac")]
 
 		[MetadataAttribute.Parameter("horse", typeof(BaseRidableAnimal))]
 		[MetadataAttribute.Info("Called when a dung is spawned at the backside of the horse.")]
 		[MetadataAttribute.Info("Override the return with an item to replace the Dung with any other item that's being dropped.")]
 		[MetadataAttribute.Return(typeof(Item))]
 
-		public class Resources_BaseRidableAnimal_e5beabfdc524496dbf5657149585bdac : Patch
+		public class OnHorseDung : Patch
 		{
 			public static bool Prefix(ref BaseRidableAnimal __instance)
 			{
