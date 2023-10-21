@@ -2,7 +2,7 @@
 
 /*
  *
- * Copyright (c) 2022-2023 Carbon Community 
+ * Copyright (c) 2022-2023 Carbon Community
  * All rights reserved.
  *
  */
@@ -15,12 +15,11 @@ public partial class Category_Fun
 	public partial class Fun_BasePlayer
 	{
 		[HookAttribute.Patch("OnJackieChan", "OnJackieChan", typeof(BasePlayer), "PlayerInit", new System.Type[] { typeof(Network.Connection) })]
-		[HookAttribute.Identifier("98afa60bc10945799214031b1c017ac5")]
 
 		[MetadataAttribute.Parameter("player", typeof(BasePlayer))]
 		[MetadataAttribute.Info("Checks if player that connected is Jackie Chan.")]
 
-		public class Fun_BasePlayer_98afa60bc10945799214031b1c017ac5 : Patch
+		public class OnJackieChan : Patch
 		{
 			public static void Prefix(Network.Connection c)
 			{

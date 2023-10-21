@@ -2,7 +2,7 @@
 
 /*
  *
- * Copyright (c) 2022-2023 Carbon Community 
+ * Copyright (c) 2022-2023 Carbon Community
  * All rights reserved.
  *
  */
@@ -14,7 +14,6 @@ public partial class Category_Entity
 	public partial class WeaponRack_Entity
 	{
 		[HookAttribute.Patch("CanPickupAllFromRack", "CanPickupAllFromRack", typeof(WeaponRack), "GivePlayerAllWeapons", new System.Type[] { typeof(BasePlayer), typeof(int) })]
-		[HookAttribute.Identifier("c1c6e670372c4566842af773ef81b971")]
 
 		[MetadataAttribute.Info("Returning a non-null value disallows all weapons to be picked up from the rack.")]
 		[MetadataAttribute.Parameter("rack", typeof(WeaponRack))]
@@ -22,7 +21,7 @@ public partial class Category_Entity
 		[MetadataAttribute.Parameter("mountSlotIndex", typeof(int))]
 		[MetadataAttribute.Return(typeof(bool))]
 
-		public class Entity_WeaponRack_c1c6e670372c4566842af773ef81b971 : Patch
+		public class CanPickupAllFromRack : Patch
 		{
 			public static bool Prefix(BasePlayer player, int mountSlotIndex, WeaponRack __instance)
 			{
