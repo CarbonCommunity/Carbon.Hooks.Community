@@ -8,7 +8,7 @@ using Patch = API.Hooks.Patch;
 
 /*
  *
- * Copyright (c) 2022-2023 Carbon Community 
+ * Copyright (c) 2022-2023 Carbon Community
  * All rights reserved.
  *
  */
@@ -21,7 +21,6 @@ public partial class Category_Vending
 	public partial class Vending_MarketTerminal
 	{
 		[HookAttribute.Patch("OnMarketplaceTerminalPurchase", "OnMarketplaceTerminalPurchase", typeof(MarketTerminal), "Server_Purchase", new System.Type[] { typeof(BaseEntity.RPCMessage) })]
-		[HookAttribute.Identifier("72eec86b418f48f18d2cdd57785bc9ab")]
 
 		[MetadataAttribute.Category("Vending")]
 		[MetadataAttribute.Parameter("terminal", typeof(MarketTerminal))]
@@ -32,7 +31,7 @@ public partial class Category_Vending
 		[MetadataAttribute.Info("Called before making a purchase at the Marketplace terminal.")]
 		[MetadataAttribute.Return(typeof(bool))]
 
-		public class Vending_MarketTerminal_72eec86b418f48f18d2cdd57785bc9ab : Patch
+		public class OnMarketplaceTerminalPurchase : Patch
 		{
 			public static IEnumerable<CodeInstruction> Transpiler(IEnumerable<CodeInstruction> Instructions, ILGenerator Generator, MethodBase Method)
 			{
