@@ -2,7 +2,7 @@
 
 /*
  *
- * Copyright (c) 2022-2023 Carbon Community 
+ * Copyright (c) 2022-2023 Carbon Community
  * All rights reserved.
  *
  */
@@ -14,7 +14,6 @@ public partial class Category_Entity
 	public partial class WeaponRack_Entity
 	{
 		[HookAttribute.Patch("CanPlaceOnRack", "CanPlaceOnRack", typeof(WeaponRack), "MountWeapon", new System.Type[] { typeof(Item), typeof(BasePlayer), typeof(int), typeof(int), typeof(bool) })]
-		[HookAttribute.Identifier("68f53adc59a14185a3d6d518cfe64e3f")]
 
 		[MetadataAttribute.Info("Returning a non-null value disallows the weapon to be placed.")]
 		[MetadataAttribute.Parameter("rack", typeof(WeaponRack))]
@@ -24,7 +23,7 @@ public partial class Category_Entity
 		[MetadataAttribute.Parameter("rotation", typeof(int))]
 		[MetadataAttribute.Return(typeof(bool))]
 
-		public class Entity_WeaponRack_68f53adc59a14185a3d6d518cfe64e3f : Patch
+		public class CanPlaceOnRack : Patch
 		{
 			public static bool Prefix(Item item, BasePlayer player, int gridCellIndex, int rotation, bool sendUpdate, ref bool __result, WeaponRack __instance)
 			{
