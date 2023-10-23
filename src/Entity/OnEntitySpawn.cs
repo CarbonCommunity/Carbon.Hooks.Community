@@ -2,7 +2,7 @@
 
 /*
  *
- * Copyright (c) 2022-2023 Carbon Community 
+ * Copyright (c) 2022-2023 Carbon Community
  * All rights reserved.
  *
  */
@@ -15,12 +15,11 @@ public partial class Category_Entity
 	public partial class Entity_BaseNetworkable
 	{
 		[HookAttribute.Patch("OnEntitySpawn", "OnEntitySpawn", typeof(BaseNetworkable), "Spawn", new System.Type[] { })]
-		[HookAttribute.Identifier("c7d1643393324307bdaa4c11df129a66")]
 
 		[MetadataAttribute.Info("Called before any networked entity has spawned (including trees).")]
 		[MetadataAttribute.Parameter("networkable", typeof(BaseNetworkable))]
 
-		public class Entity_BaseNetworkable_c7d1643393324307bdaa4c11df129a66 : Patch
+		public class OnEntitySpawn : Patch
 		{
 			public static void Prefix(ref BaseNetworkable __instance)
 				=> HookCaller.CallStaticHook(545594727, __instance);
