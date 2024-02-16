@@ -1,4 +1,5 @@
-﻿using System.Threading.Tasks;
+﻿using System.ComponentModel.Composition;
+using System.Threading.Tasks;
 using API.Hooks;
 using Carbon.Client;
 using Carbon.Client.SDK;
@@ -30,6 +31,7 @@ public partial class Category_Player
 		[MetadataAttribute.Category("Player")]
 		[MetadataAttribute.Info("Gets called when a client should or not should join the server.")]
 		[MetadataAttribute.Parameter("connection", typeof(Connection))]
+		[MetadataAttribute.Return(typeof(bool))]
 
 		public class CanClientLogin : Patch
 		{
