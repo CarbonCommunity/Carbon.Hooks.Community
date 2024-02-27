@@ -1,14 +1,5 @@
-﻿using System.Threading.Tasks;
-using API.Hooks;
-using Carbon.Base;
-using Carbon.Client;
-using Carbon.Client.SDK;
-using ConVar;
-using Oxide.Core;
-using Oxide.Core.Plugins;
-using Oxide.Plugins;
-using UnityEngine;
-using static ConVar.Chat;
+﻿using API.Hooks;
+using Oxide.Core.Libraries;
 
 /*
  *
@@ -24,13 +15,14 @@ public partial class Category_Engine
 {
 	public partial class Engine_Hooks
 	{
-		[HookAttribute.Patch("OnGroupTitleSet", "OnGroupTitleSet", null, null, null)]
+		[HookAttribute.Patch("OnGroupTitleSet", "OnGroupTitleSet", typeof(Permission), nameof(Permission.SetGroupTitle))]
 		[HookAttribute.Options(HookFlags.MetadataOnly)]
 
-		[MetadataAttribute.Category("Engine")]
+		[MetadataAttribute.Category("Permissions")]
 		[MetadataAttribute.Info("Gets called when group title is set.")]
 		[MetadataAttribute.Parameter("group", typeof(string))]
 		[MetadataAttribute.Parameter("title", typeof(string))]
+		[MetadataAttribute.Assembly("Carbon.Common.dll")]
 
 		public class OnGroupTitleSet : Patch
 		{

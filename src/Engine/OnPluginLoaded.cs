@@ -1,13 +1,6 @@
-﻿using System.Threading.Tasks;
-using API.Hooks;
-using Carbon.Client;
-using Carbon.Client.SDK;
-using ConVar;
-using Oxide.Core;
-using Oxide.Core.Plugins;
+﻿using API.Hooks;
+using Carbon.Managers;
 using Oxide.Plugins;
-using UnityEngine;
-using static ConVar.Chat;
 
 /*
  *
@@ -23,12 +16,13 @@ public partial class Category_Engine
 {
 	public partial class Engine_Hooks
 	{
-		[HookAttribute.Patch("OnPluginLoaded", "OnPluginLoaded", null, null, null)]
+		[HookAttribute.Patch("OnPluginLoaded", "OnPluginLoaded", typeof(ScriptLoader), nameof(ScriptLoader.Compile))]
 		[HookAttribute.Options(HookFlags.MetadataOnly)]
 
-		[MetadataAttribute.Category("Engine")]
+		[MetadataAttribute.Category("Permissions")]
 		[MetadataAttribute.Info("Gets called when a plugin is loaded.")]
 		[MetadataAttribute.Parameter("plugin", typeof(RustPlugin))]
+		[MetadataAttribute.Assembly("Carbon.Common.dll")]
 
 		public class OnPluginLoaded : Patch
 		{
