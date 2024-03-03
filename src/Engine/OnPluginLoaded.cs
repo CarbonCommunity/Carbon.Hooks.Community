@@ -16,7 +16,7 @@ public partial class Category_Engine
 {
 	public partial class Engine_Hooks
 	{
-		[HookAttribute.Patch("OnPluginLoaded", "OnPluginLoaded", typeof(ScriptLoader), nameof(ScriptLoader.Compile))]
+		[HookAttribute.Patch("OnPluginLoaded", "OnPluginLoaded", null, null)]
 		[HookAttribute.Options(HookFlags.MetadataOnly)]
 
 		[MetadataAttribute.Category("Permissions")]
