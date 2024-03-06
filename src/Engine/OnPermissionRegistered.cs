@@ -1,14 +1,6 @@
-﻿using System.Threading.Tasks;
-using API.Hooks;
-using Carbon.Base;
-using Carbon.Client;
-using Carbon.Client.SDK;
-using ConVar;
-using Oxide.Core;
+﻿using API.Hooks;
+using Oxide.Core.Libraries;
 using Oxide.Core.Plugins;
-using Oxide.Plugins;
-using UnityEngine;
-using static ConVar.Chat;
 
 /*
  *
@@ -24,13 +16,14 @@ public partial class Category_Engine
 {
 	public partial class Engine_Hooks
 	{
-		[HookAttribute.Patch("OnPermissionRegistered", "OnPermissionRegistered", null, null, null)]
+		[HookAttribute.Patch("OnPermissionRegistered", "OnPermissionRegistered", typeof(Permission), nameof(Permission.RegisterPermission))]
 		[HookAttribute.Options(HookFlags.MetadataOnly)]
 
-		[MetadataAttribute.Category("Engine")]
+		[MetadataAttribute.Category("Permissions")]
 		[MetadataAttribute.Info("Gets called when a permission has been registered for a plugin.")]
 		[MetadataAttribute.Parameter("permission", typeof(string))]
 		[MetadataAttribute.Parameter("plugin", typeof(Plugin))]
+		[MetadataAttribute.Assembly("Carbon.Common.dll")]
 
 		public class OnPermissionRegistered : Patch
 		{

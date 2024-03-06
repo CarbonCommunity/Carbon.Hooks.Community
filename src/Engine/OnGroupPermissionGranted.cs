@@ -1,14 +1,5 @@
-﻿using System.Threading.Tasks;
-using API.Hooks;
-using Carbon.Base;
-using Carbon.Client;
-using Carbon.Client.SDK;
-using ConVar;
-using Oxide.Core;
-using Oxide.Core.Plugins;
-using Oxide.Plugins;
-using UnityEngine;
-using static ConVar.Chat;
+﻿using API.Hooks;
+using Oxide.Core.Libraries;
 
 /*
  *
@@ -24,13 +15,14 @@ public partial class Category_Engine
 {
 	public partial class Engine_Hooks
 	{
-		[HookAttribute.Patch("OnGroupPermissionGranted", "OnGroupPermissionGranted", null, null, null)]
+		[HookAttribute.Patch("OnGroupPermissionGranted", "OnGroupPermissionGranted", typeof(Permission), nameof(Permission.GrantGroupPermission))]
 		[HookAttribute.Options(HookFlags.MetadataOnly)]
 
-		[MetadataAttribute.Category("Engine")]
+		[MetadataAttribute.Category("Permissions")]
 		[MetadataAttribute.Info("Gets called when a permission has been assigned to a group.")]
 		[MetadataAttribute.Parameter("group", typeof(string))]
 		[MetadataAttribute.Parameter("permission", typeof(string))]
+		[MetadataAttribute.Assembly("Carbon.Common.dll")]
 
 		public class OnGroupPermissionGranted : Patch
 		{
