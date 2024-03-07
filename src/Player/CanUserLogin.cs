@@ -1,13 +1,5 @@
-﻿using System.Threading.Tasks;
-using API.Hooks;
-using Carbon.Client;
-using Carbon.Client.SDK;
-using ConVar;
-using Oxide.Core;
-using Oxide.Core.Plugins;
-using Oxide.Plugins;
-using UnityEngine;
-using static ConVar.Chat;
+﻿using API.Hooks;
+using Carbon.Core;
 
 /*
  *
@@ -23,7 +15,7 @@ public partial class Category_Player
 {
 	public partial class Player_Hooks
 	{
-		[HookAttribute.Patch("CanUserLogin", "CanUserLogin", null, null, null)]
+		[HookAttribute.Patch("CanUserLogin", "CanUserLogin", typeof(CorePlugin), "IOnUserApprove")]
 		[HookAttribute.Options(HookFlags.MetadataOnly)]
 
 		[MetadataAttribute.Category("Player")]

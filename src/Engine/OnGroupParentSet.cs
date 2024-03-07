@@ -1,14 +1,5 @@
-﻿using System.Threading.Tasks;
-using API.Hooks;
-using Carbon.Base;
-using Carbon.Client;
-using Carbon.Client.SDK;
-using ConVar;
-using Oxide.Core;
-using Oxide.Core.Plugins;
-using Oxide.Plugins;
-using UnityEngine;
-using static ConVar.Chat;
+﻿using API.Hooks;
+using Oxide.Core.Libraries;
 
 /*
  *
@@ -24,13 +15,14 @@ public partial class Category_Engine
 {
 	public partial class Engine_Hooks
 	{
-		[HookAttribute.Patch("OnGroupParentSet", "OnGroupParentSet", null, null, null)]
+		[HookAttribute.Patch("OnGroupParentSet", "OnGroupParentSet", typeof(Permission), nameof(Permission.SetGroupParent))]
 		[HookAttribute.Options(HookFlags.MetadataOnly)]
 
-		[MetadataAttribute.Category("Engine")]
+		[MetadataAttribute.Category("Permissions")]
 		[MetadataAttribute.Info("Gets called when group parent is set.")]
 		[MetadataAttribute.Parameter("group", typeof(string))]
 		[MetadataAttribute.Parameter("parentGroup", typeof(string))]
+		[MetadataAttribute.Assembly("Carbon.Common.dll")]
 
 		public class OnGroupParentSet : Patch
 		{
