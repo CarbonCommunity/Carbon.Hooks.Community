@@ -1,14 +1,6 @@
-﻿using System.Threading.Tasks;
-using API.Hooks;
-using Carbon.Client;
-using Carbon.Client.SDK;
-using ConVar;
+﻿using API.Hooks;
+using Carbon.Core;
 using Network;
-using Oxide.Core;
-using Oxide.Core.Plugins;
-using Oxide.Plugins;
-using UnityEngine;
-using static ConVar.Chat;
 
 /*
  *
@@ -24,7 +16,7 @@ public partial class Category_Player
 {
 	public partial class Player_Hooks
 	{
-		[HookAttribute.Patch("OnUserApprove", "OnUserApprove", null, null, null)]
+		[HookAttribute.Patch("OnUserApprove", "OnUserApprove", typeof(CorePlugin), "IOnUserApprove")]
 		[HookAttribute.Options(HookFlags.MetadataOnly)]
 
 		[MetadataAttribute.Category("Player")]

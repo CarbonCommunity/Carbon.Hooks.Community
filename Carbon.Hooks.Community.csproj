@@ -10,7 +10,7 @@
 	<Import Project="$(SolutionDir)\.msbuild\AssemblyName.props" />
 
 	<ItemGroup>
-		<PackageReference Include="Lib.Harmony" Version="2.2.2" />
+		<PackageReference Include="System.Reflection.Emit.ILGeneration" Version="4.7.0" />
 		<ProjectReference Include="$(SolutionDir)\Carbon\Carbon.csproj" Private="false" />
 	</ItemGroup>
 

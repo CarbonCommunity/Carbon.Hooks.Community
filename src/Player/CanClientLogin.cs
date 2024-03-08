@@ -1,14 +1,6 @@
-﻿using System.Threading.Tasks;
-using API.Hooks;
-using Carbon.Client;
-using Carbon.Client.SDK;
-using ConVar;
+﻿using API.Hooks;
+using Carbon.Core;
 using Network;
-using Oxide.Core;
-using Oxide.Core.Plugins;
-using Oxide.Plugins;
-using UnityEngine;
-using static ConVar.Chat;
 
 /*
  *
@@ -24,12 +16,13 @@ public partial class Category_Player
 {
 	public partial class Player_Hooks
 	{
-		[HookAttribute.Patch("CanClientLogin", "CanClientLogin", null, null, null)]
+		[HookAttribute.Patch("CanClientLogin", "CanClientLogin", typeof(CorePlugin), "IOnUserApprove")]
 		[HookAttribute.Options(HookFlags.MetadataOnly)]
 
 		[MetadataAttribute.Category("Player")]
 		[MetadataAttribute.Info("Gets called when a client should or not should join the server.")]
 		[MetadataAttribute.Parameter("connection", typeof(Connection))]
+		[MetadataAttribute.Return(typeof(bool))]
 
 		public class CanClientLogin : Patch
 		{
