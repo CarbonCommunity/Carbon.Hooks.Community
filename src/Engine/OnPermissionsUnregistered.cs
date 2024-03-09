@@ -1,14 +1,6 @@
-﻿using System.Threading.Tasks;
-using API.Hooks;
-using Carbon.Base;
-using Carbon.Client;
-using Carbon.Client.SDK;
-using ConVar;
-using Oxide.Core;
+﻿using API.Hooks;
+using Oxide.Core.Libraries;
 using Oxide.Core.Plugins;
-using Oxide.Plugins;
-using UnityEngine;
-using static ConVar.Chat;
 
 /*
  *
@@ -24,12 +16,13 @@ public partial class Category_Engine
 {
 	public partial class Engine_Hooks
 	{
-		[HookAttribute.Patch("OnPermissionsUnregistered", "OnPermissionsUnregistered", null, null, null)]
+		[HookAttribute.Patch("OnPermissionsUnregistered", "OnPermissionsUnregistered", typeof(Permission), nameof(Permission.UnregisterPermissions))]
 		[HookAttribute.Options(HookFlags.MetadataOnly)]
 
-		[MetadataAttribute.Category("Engine")]
+		[MetadataAttribute.Category("Permissions")]
 		[MetadataAttribute.Info("Gets called when all permission of a plugin have been unregistered.")]
 		[MetadataAttribute.Parameter("plugin", typeof(Plugin))]
+		[MetadataAttribute.Assembly("Carbon.Common.dll")]
 
 		public class OnPermissionsUnregistered : Patch
 		{

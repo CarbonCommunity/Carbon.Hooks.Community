@@ -1,15 +1,6 @@
-﻿using System.Threading.Tasks;
-using API.Hooks;
-using Carbon.Client;
-using Carbon.Client.SDK;
-using ConVar;
+﻿using API.Hooks;
+using Carbon.Core;
 using Network;
-using Oxide.Core;
-using Oxide.Core.Libraries.Covalence;
-using Oxide.Core.Plugins;
-using Oxide.Plugins;
-using UnityEngine;
-using static ConVar.Chat;
 
 /*
  *
@@ -25,7 +16,7 @@ public partial class Category_Player
 {
 	public partial class Player_Hooks
 	{
-		[HookAttribute.Patch("OnPlayerBanned", "OnPlayerBanned", null, null, null)]
+		[HookAttribute.Patch("OnPlayerBanned", "OnPlayerBanned", typeof(CorePlugin), "IOnPlayerBanned")]
 		[HookAttribute.Options(HookFlags.MetadataOnly)]
 
 		[MetadataAttribute.Category("Player")]
