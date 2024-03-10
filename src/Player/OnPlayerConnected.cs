@@ -20,7 +20,6 @@ public partial class Category_Player
 		[HookAttribute.Options(HookFlags.MetadataOnly)]
 
 		[MetadataAttribute.Category("Player")]
-		[MetadataAttribute.Info("Called after the player object is created, but before the player has spawned.")]
 		[MetadataAttribute.Parameter("player", typeof(BasePlayer))]
 
 		public class OnPlayerConnected : Patch
