@@ -1,14 +1,5 @@
-﻿using System.Threading.Tasks;
-using API.Hooks;
-using Carbon.Base;
-using Carbon.Client;
-using Carbon.Client.SDK;
-using ConVar;
-using Oxide.Core;
-using Oxide.Core.Plugins;
-using Oxide.Plugins;
-using UnityEngine;
-using static ConVar.Chat;
+﻿using API.Hooks;
+using Oxide.Core.Libraries;
 
 /*
  *
@@ -24,16 +15,17 @@ public partial class Category_Engine
 {
 	public partial class Engine_Hooks
 	{
-		[HookAttribute.Patch("OnDestroyUI", "OnDestroyUI", null, null, null)]
+		[HookAttribute.Patch("OnUserNameUpdated", "OnUserNameUpdated", typeof(Permission), nameof(Permission.UpdateNickname))]
 		[HookAttribute.Options(HookFlags.MetadataOnly)]
 
-		[MetadataAttribute.Category("Engine")]
-		[MetadataAttribute.Info("Gets called when an UI is being destroyed on a client.")]
-		[MetadataAttribute.Info("`name` is the name of the client panel.")]
-		[MetadataAttribute.Parameter("player", typeof(BasePlayer))]
-		[MetadataAttribute.Parameter("name", typeof(string))]
+		[MetadataAttribute.Category("Permissions")]
+		[MetadataAttribute.Info("Gets called the nickname of a player gets updated.")]
+		[MetadataAttribute.Parameter("id", typeof(string))]
+		[MetadataAttribute.Parameter("oldName", typeof(string))]
+		[MetadataAttribute.Parameter("newName", typeof(string))]
+		[MetadataAttribute.Assembly("Carbon.Common.dll")]
 
-		public class OnDestroyUI : Patch
+		public class OnUserNameUpdated : Patch
 		{
 
 		}

@@ -1,6 +1,7 @@
 ﻿using API.Hooks;
 using Carbon.Core;
 using Network;
+using Oxide.Core.Libraries.Covalence;
 
 /*
  *
@@ -16,15 +17,13 @@ public partial class Category_Player
 {
 	public partial class Player_Hooks
 	{
-		[HookAttribute.Patch("CanClientLogin", "CanClientLogin", typeof(CorePlugin), "IOnUserApprove")]
+		[HookAttribute.Patch("OnUserConnected", "OnUserConnected", typeof(CorePlugin), "IOnPlayerConnected")]
 		[HookAttribute.Options(HookFlags.MetadataOnly)]
 
 		[MetadataAttribute.Category("Player")]
-		[MetadataAttribute.Info("Gets called when a client should or not should join the server.")]
-		[MetadataAttribute.Parameter("connection", typeof(Connection))]
-		[MetadataAttribute.Return(typeof(bool))]
+		[MetadataAttribute.Parameter("player", typeof(IPlayer))]
 
-		public class CanClientLogin : Patch
+		public class OnUserConnected : Patch
 		{
 
 		}
