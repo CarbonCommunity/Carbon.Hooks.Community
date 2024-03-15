@@ -19,7 +19,7 @@ public partial class Category_Engine
 		[HookAttribute.Patch("OnPluginLoaded", "OnPluginLoaded", null, null)]
 		[HookAttribute.Options(HookFlags.MetadataOnly)]
 
-		[MetadataAttribute.Category("Permissions")]
+		[MetadataAttribute.Category("Engine")]
 		[MetadataAttribute.Info("Gets called when a plugin is loaded.")]
 		[MetadataAttribute.Parameter("plugin", typeof(RustPlugin))]
 		[MetadataAttribute.Assembly("Carbon.Common.dll")]
