@@ -1,4 +1,5 @@
-﻿using API.Hooks;
+﻿using API.Events;
+using API.Hooks;
 using Oxide.Core.Libraries;
 using Oxide.Core.Plugins;
 
@@ -26,7 +27,6 @@ public partial class Category_Engine
 
 		public class OnPermissionsUnregistered : Patch
 		{
-
 		}
 	}
 }
