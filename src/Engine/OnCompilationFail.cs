@@ -21,7 +21,7 @@ public partial class Category_Engine
 		[HookAttribute.Options(HookFlags.MetadataOnly)]
 
 		[MetadataAttribute.Category("Engine")]
-		[MetadataAttribute.Info("Gets called when a plugin is unloaded.")]
+		[MetadataAttribute.Info("Gets called when a plugin fails compiling.")]
 		[MetadataAttribute.Parameter("filePath", typeof(string))]
 		[MetadataAttribute.Parameter("compilation", typeof(ModLoader.FailedCompilation))]
 		[MetadataAttribute.Assembly("Carbon.dll")]
