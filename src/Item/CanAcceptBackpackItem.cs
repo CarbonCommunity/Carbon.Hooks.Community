@@ -25,7 +25,7 @@ public partial class Category_Fun
 		{
 			public static bool Prefix(Item backpack, Item item, int slot, ref bool __result)
 			{
-				if (HookCaller.CallStaticHook(2803314817, backpack, item) is bool hookValue)
+				if (HookCaller.CallStaticHook(2306141762, backpack, item) is bool hookValue)
 				{
 					__result = hookValue;
 					return false;
