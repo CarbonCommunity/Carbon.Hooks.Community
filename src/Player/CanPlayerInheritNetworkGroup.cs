@@ -24,7 +24,7 @@ public partial class Category_Player
 		{
 			public static bool Prefix(ref BasePlayer __instance, ref bool __result)
 			{
-				if (HookCaller.CallStaticHook(3308399298, __instance) is bool hookValue)
+				if (HookCaller.CallStaticHook(617273774, __instance) is bool hookValue)
 				{
 					__result = hookValue;
 					return false;
