@@ -22,7 +22,7 @@ public partial class Category_Entity
 		public class OnEntitySpawn : Patch
 		{
 			public static void Prefix(ref BaseNetworkable __instance)
-				=> HookCaller.CallStaticHook(545594727, __instance);
+				=> HookCaller.CallStaticHook(4136550545, __instance);
 		}
 	}
 }

@@ -25,7 +25,7 @@ public partial class Category_Entity
 		{
 			public static bool Prefix(BasePlayer ply, ref PatrolHelicopterAI __instance, out bool __result)
 			{
-				if (HookCaller.CallStaticHook(1610282469, __instance, ply) is bool boolean)
+				if (HookCaller.CallStaticHook(2827558490, __instance, ply) is bool boolean)
 				{
 					__result = boolean;
 					return false;

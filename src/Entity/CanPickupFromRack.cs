@@ -51,7 +51,7 @@ public partial class Category_Entity
 
 				_currentItem = slot;
 
-				if (HookCaller.CallStaticHook(2308599075, __instance, player, _currentItem, mountSlotIndex, playerBeltIndex, tryHold) is bool hookValue)
+				if (HookCaller.CallStaticHook(2780342367, __instance, player, _currentItem, mountSlotIndex, playerBeltIndex, tryHold) is bool hookValue)
 				{
 					_hasPickedUp = hookValue;
 					return hookValue;
@@ -68,7 +68,7 @@ public partial class Category_Entity
 					return;
 				}
 
-				HookCaller.CallStaticHook(1687007383, __instance, player, _currentItem, mountSlotIndex, playerBeltIndex, tryHold);
+				HookCaller.CallStaticHook(3671231874, __instance, player, _currentItem, mountSlotIndex, playerBeltIndex, tryHold);
 			}
 		}
 	}
