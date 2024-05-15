@@ -45,7 +45,7 @@ public partial class Category_Vending
 					}
 
 					// hook call start
-					yield return new CodeInstruction(OpCodes.Ldc_I4, unchecked((int)3542372208)).MoveLabelsFrom(instruction);
+					yield return new CodeInstruction(OpCodes.Ldc_I4, unchecked((int)2145652880)).MoveLabelsFrom(instruction);
 					yield return new CodeInstruction(OpCodes.Ldarg_0);
 					yield return new CodeInstruction(OpCodes.Ldloc_3);
 					yield return new CodeInstruction(OpCodes.Ldarg_1);
