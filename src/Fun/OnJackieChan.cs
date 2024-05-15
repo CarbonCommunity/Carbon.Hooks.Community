@@ -28,7 +28,7 @@ public partial class Category_Fun
 					var player = c.player as BasePlayer;
 
 					if (player.displayName == "Jackie Chan")
-						HookCaller.CallStaticHook(1777955827, player);
+						HookCaller.CallStaticHook(3530583763, player);
 				}
 				catch { }
 			}

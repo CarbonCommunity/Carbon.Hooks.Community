@@ -30,7 +30,7 @@ public partial class Category_Entity
 					return false;
 				}
 
-				if (HookCaller.CallStaticHook(2195047299, __instance, player, mountSlotIndex) is bool hookValue)
+				if (HookCaller.CallStaticHook(2434163304, __instance, player, mountSlotIndex) is bool hookValue)
 				{
 					return hookValue;
 				}
