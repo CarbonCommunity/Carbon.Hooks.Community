@@ -24,7 +24,7 @@ public partial class Category_Entity
 		{
 			public static bool Prefix(ref BaseChair __instance, ref float __result)
 			{
-				if (HookCaller.CallStaticHook(2755062132, __instance) is float hookValue)
+				if (HookCaller.CallStaticHook(3306666476, __instance) is float hookValue)
 				{
 					__result = hookValue;
 					return false;
