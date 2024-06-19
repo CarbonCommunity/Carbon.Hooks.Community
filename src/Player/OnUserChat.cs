@@ -24,9 +24,6 @@ public partial class Category_Player
 		[MetadataAttribute.Parameter("player", typeof(IPlayer))]
 		[MetadataAttribute.Parameter("message", typeof(string))]
 
-		public class OnUserChat : Patch
-		{
-
-		}
+		public class OnUserChat : Patch;
 	}
 }

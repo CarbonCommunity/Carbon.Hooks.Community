@@ -23,9 +23,6 @@ public partial class Category_Player
 		[MetadataAttribute.Category("Player")]
 		[MetadataAttribute.Parameter("player", typeof(IPlayer))]
 
-		public class OnUserConnected : Patch
-		{
-
-		}
+		public class OnUserConnected : Patch;
 	}
 }

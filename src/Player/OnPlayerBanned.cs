@@ -24,9 +24,6 @@ public partial class Category_Player
 		[MetadataAttribute.Parameter("connection", typeof(Connection))]
 		[MetadataAttribute.Parameter("reason", typeof(string))]
 
-		public class OnPlayerBanned : Patch
-		{
-
-		}
+		public class OnPlayerBanned : Patch;
 	}
 }

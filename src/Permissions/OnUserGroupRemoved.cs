@@ -24,9 +24,6 @@ public partial class Category_Engine
 		[MetadataAttribute.Parameter("group", typeof(string))]
 		[MetadataAttribute.Assembly("Carbon.Common.dll")]
 
-		public class OnUserGroupRemoved : Patch
-		{
-
-		}
+		public class OnUserGroupRemoved : Patch;
 	}
 }
