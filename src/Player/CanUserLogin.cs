@@ -25,9 +25,6 @@ public partial class Category_Player
 		[MetadataAttribute.Parameter("ip", typeof(string))]
 		[MetadataAttribute.Return(typeof(bool))]
 
-		public class CanUserLogin : Patch
-		{
-
-		}
+		public class CanUserLogin : Patch;
 	}
 }

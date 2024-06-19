@@ -24,9 +24,6 @@ public partial class Category_Engine
 		[MetadataAttribute.Parameter("parentGroup", typeof(string))]
 		[MetadataAttribute.Assembly("Carbon.Common.dll")]
 
-		public class OnGroupParentSet : Patch
-		{
-
-		}
+		public class OnGroupParentSet : Patch;
 	}
 }

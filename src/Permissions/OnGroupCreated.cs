@@ -25,9 +25,6 @@ public partial class Category_Engine
 		[MetadataAttribute.Parameter("rank", typeof(int))]
 		[MetadataAttribute.Assembly("Carbon.Common.dll")]
 
-		public class OnGroupCreated : Patch
-		{
-
-		}
+		public class OnGroupCreated : Patch;
 	}
 }

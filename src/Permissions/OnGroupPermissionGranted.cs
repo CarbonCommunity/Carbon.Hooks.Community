@@ -24,9 +24,6 @@ public partial class Category_Engine
 		[MetadataAttribute.Parameter("permission", typeof(string))]
 		[MetadataAttribute.Assembly("Carbon.Common.dll")]
 
-		public class OnGroupPermissionGranted : Patch
-		{
-
-		}
+		public class OnGroupPermissionGranted : Patch;
 	}
 }

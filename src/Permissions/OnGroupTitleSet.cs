@@ -24,9 +24,6 @@ public partial class Category_Engine
 		[MetadataAttribute.Parameter("title", typeof(string))]
 		[MetadataAttribute.Assembly("Carbon.Common.dll")]
 
-		public class OnGroupTitleSet : Patch
-		{
-
-		}
+		public class OnGroupTitleSet : Patch;
 	}
 }
