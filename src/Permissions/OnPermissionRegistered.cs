@@ -25,9 +25,6 @@ public partial class Category_Engine
 		[MetadataAttribute.Parameter("plugin", typeof(Plugin))]
 		[MetadataAttribute.Assembly("Carbon.Common.dll")]
 
-		public class OnPermissionRegistered : Patch
-		{
-
-		}
+		public class OnPermissionRegistered : Patch;
 	}
 }

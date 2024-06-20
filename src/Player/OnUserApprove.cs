@@ -23,9 +23,6 @@ public partial class Category_Player
 		[MetadataAttribute.Info("Gets called when a connection is or not approved to join the server.")]
 		[MetadataAttribute.Parameter("connection", typeof(Connection))]
 
-		public class OnUserApprove : Patch
-		{
-
-		}
+		public class OnUserApprove : Patch;
 	}
 }

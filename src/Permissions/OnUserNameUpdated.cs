@@ -25,9 +25,6 @@ public partial class Category_Engine
 		[MetadataAttribute.Parameter("newName", typeof(string))]
 		[MetadataAttribute.Assembly("Carbon.Common.dll")]
 
-		public class OnUserNameUpdated : Patch
-		{
-
-		}
+		public class OnUserNameUpdated : Patch;
 	}
 }
