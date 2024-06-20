@@ -22,8 +22,8 @@ public partial class Category_Engine
 
 		[MetadataAttribute.Category("Engine")]
 		[MetadataAttribute.Info("Gets called when a plugin fails compiling.")]
-		[MetadataAttribute.Parameter("filePath", typeof(string))]
-		[MetadataAttribute.Parameter("compilation", typeof(ModLoader.FailedCompilation))]
+		[MetadataAttribute.Parameter("file", typeof(string))]
+		[MetadataAttribute.Parameter("result", typeof(ModLoader.CompilationResult))]
 		[MetadataAttribute.Assembly("Carbon.dll")]
 
 		public class OnCompilationFail : Patch
