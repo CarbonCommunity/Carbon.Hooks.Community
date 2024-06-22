@@ -22,9 +22,6 @@ public partial class Category_Player
 		[MetadataAttribute.Category("Player")]
 		[MetadataAttribute.Parameter("player", typeof(BasePlayer))]
 
-		public class OnPlayerConnected : Patch
-		{
-
-		}
+		public class OnPlayerConnected : Patch;
 	}
 }

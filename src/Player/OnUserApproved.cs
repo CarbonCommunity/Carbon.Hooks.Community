@@ -24,9 +24,6 @@ public partial class Category_Player
 		[MetadataAttribute.Parameter("userid", typeof(string))]
 		[MetadataAttribute.Parameter("ip", typeof(string))]
 
-		public class OnUserApproved : Patch
-		{
-
-		}
+		public class OnUserApproved : Patch;
 	}
 }
