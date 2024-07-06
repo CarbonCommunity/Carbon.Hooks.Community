@@ -1,18 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Composition;
-using System.Threading.Tasks;
-using API.Hooks;
-using Carbon.Base;
-using Carbon.Client;
-using Carbon.Client.SDK;
-using ConVar;
-using Oxide.Core;
-using Oxide.Core.Plugins;
+﻿using API.Hooks;
 using Oxide.Game.Rust.Cui;
-using Oxide.Plugins;
-using UnityEngine;
-using static ConVar.Chat;
 
 /*
  *
