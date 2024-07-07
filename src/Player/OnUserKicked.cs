@@ -24,9 +24,6 @@ public partial class Category_Player
 		[MetadataAttribute.Parameter("player", typeof(IPlayer))]
 		[MetadataAttribute.Parameter("reason", typeof(string))]
 
-		public class OnUserKicked : Patch
-		{
-
-		}
+		public class OnUserKicked : Patch;
 	}
 }

@@ -23,9 +23,6 @@ public partial class Category_Player
 		[MetadataAttribute.Info("Gets called when a covalence player fully respawned.")]
 		[MetadataAttribute.Parameter("player", typeof(IPlayer))]
 
-		public class OnUserRespawned : Patch
-		{
-
-		}
+		public class OnUserRespawned : Patch;
 	}
 }

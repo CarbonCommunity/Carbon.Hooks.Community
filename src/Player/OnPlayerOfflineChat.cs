@@ -26,9 +26,6 @@ public partial class Category_Player
 		[MetadataAttribute.Parameter("message", typeof(string))]
 		[MetadataAttribute.Parameter("channel", typeof(ChatChannel))]
 
-		public class OnPlayerOfflineChat : Patch
-		{
-
-		}
+		public class OnPlayerOfflineChat : Patch;
 	}
 }

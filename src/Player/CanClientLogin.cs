@@ -24,9 +24,6 @@ public partial class Category_Player
 		[MetadataAttribute.Parameter("connection", typeof(Connection))]
 		[MetadataAttribute.Return(typeof(bool))]
 
-		public class CanClientLogin : Patch
-		{
-
-		}
+		public class CanClientLogin : Patch;
 	}
 }
