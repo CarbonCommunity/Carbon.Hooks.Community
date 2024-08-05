@@ -1,17 +1,10 @@
 ﻿using System;
 using API.Hooks;
 using Carbon.Core;
-using Carbon.Managers;
 using Oxide.Plugins;
 
-/*
- *
- * Copyright (c) 2022-2023 Carbon Community
- * All rights reserved.
- *
- */
-
 namespace Carbon.Hooks;
+
 #pragma warning disable IDE0051
 
 public partial class Category_Engine
