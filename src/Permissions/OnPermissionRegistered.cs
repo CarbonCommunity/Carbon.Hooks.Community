@@ -2,14 +2,8 @@
 using Oxide.Core.Libraries;
 using Oxide.Core.Plugins;
 
-/*
- *
- * Copyright (c) 2022-2023 Carbon Community
- * All rights reserved.
- *
- */
-
 namespace Carbon.Hooks;
+
 #pragma warning disable IDE0051
 
 public partial class Category_Engine
@@ -25,9 +19,6 @@ public partial class Category_Engine
 		[MetadataAttribute.Parameter("plugin", typeof(Plugin))]
 		[MetadataAttribute.Assembly("Carbon.Common.dll")]
 
-		public class OnPermissionRegistered : Patch
-		{
-
-		}
+		public class OnPermissionRegistered : Patch;
 	}
 }

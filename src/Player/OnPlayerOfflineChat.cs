@@ -2,14 +2,8 @@
 using Carbon.Core;
 using static ConVar.Chat;
 
-/*
- *
- * Copyright (c) 2022-2023 Carbon Community
- * All rights reserved.
- *
- */
-
 namespace Carbon.Hooks;
+
 #pragma warning disable IDE0051
 
 public partial class Category_Player
@@ -26,9 +20,6 @@ public partial class Category_Player
 		[MetadataAttribute.Parameter("message", typeof(string))]
 		[MetadataAttribute.Parameter("channel", typeof(ChatChannel))]
 
-		public class OnPlayerOfflineChat : Patch
-		{
-
-		}
+		public class OnPlayerOfflineChat : Patch;
 	}
 }

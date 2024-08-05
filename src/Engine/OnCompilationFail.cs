@@ -1,16 +1,9 @@
 ﻿using API.Hooks;
 using Carbon.Core;
 using Carbon.Managers;
-using Oxide.Plugins;
-
-/*
- *
- * Copyright (c) 2022-2023 Carbon Community
- * All rights reserved.
- *
- */
 
 namespace Carbon.Hooks;
+
 #pragma warning disable IDE0051
 
 public partial class Category_Engine
@@ -22,8 +15,8 @@ public partial class Category_Engine
 
 		[MetadataAttribute.Category("Engine")]
 		[MetadataAttribute.Info("Gets called when a plugin fails compiling.")]
-		[MetadataAttribute.Parameter("filePath", typeof(string))]
-		[MetadataAttribute.Parameter("compilation", typeof(ModLoader.FailedCompilation))]
+		[MetadataAttribute.Parameter("file", typeof(string))]
+		[MetadataAttribute.Parameter("result", typeof(ModLoader.CompilationResult))]
 		[MetadataAttribute.Assembly("Carbon.dll")]
 
 		public class OnCompilationFail : Patch

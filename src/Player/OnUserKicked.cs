@@ -2,14 +2,8 @@
 using Carbon.Core;
 using Oxide.Core.Libraries.Covalence;
 
-/*
- *
- * Copyright (c) 2022-2023 Carbon Community
- * All rights reserved.
- *
- */
-
 namespace Carbon.Hooks;
+
 #pragma warning disable IDE0051
 
 public partial class Category_Player
@@ -24,9 +18,6 @@ public partial class Category_Player
 		[MetadataAttribute.Parameter("player", typeof(IPlayer))]
 		[MetadataAttribute.Parameter("reason", typeof(string))]
 
-		public class OnUserKicked : Patch
-		{
-
-		}
+		public class OnUserKicked : Patch;
 	}
 }

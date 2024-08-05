@@ -1,13 +1,7 @@
 ﻿using API.Hooks;
 
-/*
- *
- * Copyright (c) 2022-2023 Carbon Community
- * All rights reserved.
- *
- */
-
 namespace Carbon.Hooks;
+
 #pragma warning disable IDE0051
 
 public partial class Category_Fun
@@ -25,13 +19,9 @@ public partial class Category_Fun
 		{
 			public static bool Prefix(Item backpack, Item item, int slot, ref bool __result)
 			{
-				if (HookCaller.CallStaticHook(2306141762, backpack, item) is bool hookValue)
-				{
-					__result = hookValue;
-					return false;
-				}
-
-				return true;
+				if (HookCaller.CallStaticHook(2306141762, backpack, item) is not bool hookValue) return true;
+				__result = hookValue;
+				return false;
 			}
 		}
 	}
