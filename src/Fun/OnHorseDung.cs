@@ -2,14 +2,8 @@
 using UnityEngine;
 using Random = UnityEngine.Random;
 
-/*
- *
- * Copyright (c) 2022-2023 Carbon Community
- * All rights reserved.
- *
- */
-
 namespace Carbon.Hooks;
+
 #pragma warning disable IDE0051
 
 public partial class Category_Resources
