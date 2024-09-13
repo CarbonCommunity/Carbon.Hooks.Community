@@ -20,7 +20,7 @@ public partial class Category_Entity
 		{
 			public static bool Prefix(Item item, BasePlayer player, int gridCellIndex, int rotation, bool sendUpdate, ref bool __result, WeaponRack __instance)
 			{
-				if (HookCaller.CallStaticHook(2507203607, __instance, player, item, gridCellIndex, rotation) is bool hookValue)
+				if (HookCaller.CallStaticHook(1860967996, __instance, player, item, gridCellIndex, rotation) is bool hookValue)
 				{
 					__result = hookValue;
 					return false;
