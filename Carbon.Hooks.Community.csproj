@@ -18,7 +18,7 @@
 	</Target>
 
 	<Target Name="NormalRelease" AfterTargets="Build" DependsOnTargets="PrepareRelease" Condition="!($(DefineConstants.Contains('HOOKGEN')))">
-		<DownloadFile DestinationFolder="$(c_hooks)" SourceUrl="https://carbonmod.gg/redist/server/$(Configuration.ToLower())/$(CarbonProtocol)/carbon/managed/hooks/Carbon.Hooks.Community.dll" ContinueOnError="true" />
+		<DownloadFile DestinationFolder="$(c_hooks)" SourceUrl="https://carbonmod.gg/redist/server/$(Configuration.ToLower().Replace('minimal', 'release'))/$(CarbonProtocol)/carbon/managed/hooks/Carbon.Hooks.Community.dll" ContinueOnError="true" />
 	</Target>
 
 	<Target Name="HookRelease" AfterTargets="Build" DependsOnTargets="PrepareRelease" Condition="$(DefineConstants.Contains('HOOKGEN'))">
