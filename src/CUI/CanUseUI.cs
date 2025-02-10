@@ -18,6 +18,7 @@ public partial class Category_Engine
 		[MetadataAttribute.Parameter("json", typeof(string))]
 		[MetadataAttribute.Return(typeof(bool))]
 		[MetadataAttribute.Assembly("Carbon.Common.dll")]
+		[MetadataAttribute.OxideCompatible]
 
 		public class CanUseUI : Patch
 		{

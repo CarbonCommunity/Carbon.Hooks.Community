@@ -1,4 +1,5 @@
-﻿using API.Hooks;
+﻿using System.ComponentModel.Composition;
+using API.Hooks;
 using Carbon.Core;
 
 namespace Carbon.Hooks;
@@ -18,6 +19,7 @@ public partial class Category_Player
 		[MetadataAttribute.Parameter("userid", typeof(string))]
 		[MetadataAttribute.Parameter("ip", typeof(string))]
 		[MetadataAttribute.Return(typeof(bool))]
+		[MetadataAttribute.OxideCompatible]
 
 		public class CanUserLogin : Patch;
 	}

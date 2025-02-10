@@ -18,6 +18,7 @@ public partial class Category_Entity
 		[MetadataAttribute.Parameter("info", typeof(HitInfo))]
 		[MetadataAttribute.Return(typeof(bool))]
 		[MetadataAttribute.Assembly("Carbon.Common.dll")]
+		[MetadataAttribute.OxideCompatible]
 
 		public class OnEntityTakeDamage : Patch;
 	}
