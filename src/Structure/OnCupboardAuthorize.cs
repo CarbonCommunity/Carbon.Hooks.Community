@@ -18,6 +18,7 @@ public partial class Category_Structure
 		[MetadataAttribute.Parameter("player", typeof(BasePlayer))]
 		[MetadataAttribute.Return(typeof(object))]
 		[MetadataAttribute.Assembly("Carbon.Common.dll")]
+		[MetadataAttribute.OxideCompatible]
 
 		public class OnCupboardAuthorize : Patch
 		{

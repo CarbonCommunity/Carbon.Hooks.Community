@@ -17,6 +17,7 @@ public partial class Category_Player
 		[MetadataAttribute.Info("Gets called when a player sends a chat message.")]
 		[MetadataAttribute.Parameter("player", typeof(IPlayer))]
 		[MetadataAttribute.Parameter("message", typeof(string))]
+		[MetadataAttribute.OxideCompatible]
 
 		public class OnUserChat : Patch;
 	}
