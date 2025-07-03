@@ -46,7 +46,7 @@ public partial class Category_Team
 						n.Add(new(OpCodes.Ldloc_0) { labels = o[i + 0].labels, blocks = o[i + 0].blocks });
 						n.Add(new(OpCodes.Ldloc_3));
 						n.Add(new(OpCodes.Ldloc_2));
-						n.Add(new(OpCodes.Call, AccessTools.Method(typeof(OnTeamOfflineInvited), nameof(Hook))));
+						n.Add(new(OpCodes.Call, AccessTools.Method(typeof(OnTeamOfflineInvite), nameof(Hook))));
 						n.Add(new(OpCodes.Brtrue_S, jump_target));
 						n.Add(new(OpCodes.Ret));
 						n.Add(new(OpCodes.Nop) { labels = [jump_target] });
