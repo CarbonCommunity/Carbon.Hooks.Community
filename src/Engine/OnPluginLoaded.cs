@@ -9,7 +9,7 @@ public partial class Category_Engine
 {
 	public partial class Engine_Hooks
 	{
-		[HookAttribute.Patch("OnPluginLoaded", "OnPluginLoaded", null, null)]
+		[HookAttribute.Patch("OnPluginLoaded", "OnPluginLoaded")]
 		[HookAttribute.Options(HookFlags.MetadataOnly)]
 
 		[MetadataAttribute.Category("Engine")]
