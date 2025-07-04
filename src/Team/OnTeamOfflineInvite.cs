@@ -14,7 +14,7 @@ public partial class Category_Team
 {
 	public partial class Team_OnTeamOfflineInvite
 	{
-		[HookAttribute.Patch("OnTeamOfflineInvite", "OnTeamOfflineInvite", typeof(MarketTerminal), "Server_Purchase", new System.Type[] { typeof(BaseEntity.RPCMessage) })]
+		[HookAttribute.Patch("OnTeamOfflineInvite", "OnTeamOfflineInvite", typeof(RelationshipManager), "sendofflineinvite", [typeof(ConsoleSystem.Arg)])]
 		[MetadataAttribute.Category("Team")]
 		[MetadataAttribute.Parameter("inviter", typeof(BasePlayer))]
 		[MetadataAttribute.Parameter("invitee", typeof(VendingMachine))]
