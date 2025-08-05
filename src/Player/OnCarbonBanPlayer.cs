@@ -11,14 +11,16 @@ public partial class Category_Player
 {
 	public partial class Player_Hooks
 	{
-		[HookAttribute.Patch("OnCarbonEmpowerPlayerStats", "OnCarbonEmpowerPlayerStats", typeof(AdminModule), "EmpowerPlayerStats")]
+		[HookAttribute.Patch("OnCarbonBanPlayer", "OnCarbonBanPlayer", typeof(AdminModule), "BanPlayer")]
 		[HookAttribute.Options(HookFlags.MetadataOnly)]
 
 		[MetadataAttribute.Category("Player")]
-		[MetadataAttribute.Info("Called when a player's health, metabolism, and stats are maxed out.")]
+		[MetadataAttribute.Info("Called when a player becomes banned.")]
 		[MetadataAttribute.Parameter("invoker", typeof(BasePlayer))]
 		[MetadataAttribute.Parameter("target", typeof(BasePlayer))]
+		[MetadataAttribute.Parameter("reason", typeof(string))]
+		[MetadataAttribute.Parameter("expiry", typeof(long))]
 
-		public class OnCarbonEmpowerPlayerStats : Patch;
+		public class OnCarbonBanPlayer : Patch;
 	}
 }

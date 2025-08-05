@@ -19,9 +19,6 @@ public partial class Category_Server
 		[MetadataAttribute.Assembly("Carbon.Common.dll")]
 		[MetadataAttribute.OxideCompatible]
 
-		public class OnServerCommand : Patch
-		{
-
-		}
+		public class OnServerCommand : Patch;
 	}
 }

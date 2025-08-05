@@ -11,14 +11,15 @@ public partial class Category_Player
 {
 	public partial class Player_Hooks
 	{
-		[HookAttribute.Patch("OnCarbonEmpowerPlayerStats", "OnCarbonEmpowerPlayerStats", typeof(AdminModule), "EmpowerPlayerStats")]
+		[HookAttribute.Patch("OnCarbonKickPlayer", "OnCarbonKickPlayer", typeof(AdminModule), "KickPlayer")]
 		[HookAttribute.Options(HookFlags.MetadataOnly)]
 
 		[MetadataAttribute.Category("Player")]
-		[MetadataAttribute.Info("Called when a player's health, metabolism, and stats are maxed out.")]
+		[MetadataAttribute.Info("Called when a player gets kicked.")]
 		[MetadataAttribute.Parameter("invoker", typeof(BasePlayer))]
 		[MetadataAttribute.Parameter("target", typeof(BasePlayer))]
+		[MetadataAttribute.Parameter("reason", typeof(string))]
 
-		public class OnCarbonEmpowerPlayerStats : Patch;
+		public class OnCarbonKickPlayer : Patch;
 	}
 }

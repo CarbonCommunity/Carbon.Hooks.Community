@@ -15,8 +15,9 @@ public partial class Category_Player
 		[HookAttribute.Options(HookFlags.MetadataOnly)]
 
 		[MetadataAttribute.Category("Player")]
-		[MetadataAttribute.Info("Called when a player is unblinded.")]
-		[MetadataAttribute.Parameter("player", typeof(BasePlayer))]
+		[MetadataAttribute.Info("Called when a player becomes unblinded.")]
+		[MetadataAttribute.Parameter("invoker", typeof(BasePlayer))]
+		[MetadataAttribute.Parameter("target", typeof(BasePlayer))]
 
 		public class OnCarbonUnblinded : Patch;
 	}

@@ -15,8 +15,10 @@ public partial class Category_Player
 		[HookAttribute.Options(HookFlags.MetadataOnly)]
 
 		[MetadataAttribute.Category("Player")]
-		[MetadataAttribute.Info("Called when a player is blinded.")]
-		[MetadataAttribute.Parameter("player", typeof(BasePlayer))]
+		[MetadataAttribute.Info("Called when a player becomes blind.")]
+		[MetadataAttribute.Info("Their screen and input will become obscured and blocked.")]
+		[MetadataAttribute.Parameter("invoker", typeof(BasePlayer))]
+		[MetadataAttribute.Parameter("target", typeof(BasePlayer))]
 
 		public class OnCarbonBlinded : Patch;
 	}

@@ -11,14 +11,16 @@ public partial class Category_Player
 {
 	public partial class Player_Hooks
 	{
-		[HookAttribute.Patch("OnCarbonEmpowerPlayerStats", "OnCarbonEmpowerPlayerStats", typeof(AdminModule), "EmpowerPlayerStats")]
+		[HookAttribute.Patch("OnCarbonMutePlayer", "OnCarbonMutePlayer", typeof(AdminModule), "MutePlayer")]
 		[HookAttribute.Options(HookFlags.MetadataOnly)]
 
 		[MetadataAttribute.Category("Player")]
-		[MetadataAttribute.Info("Called when a player's health, metabolism, and stats are maxed out.")]
+		[MetadataAttribute.Info("Called when a player becomes mute.")]
 		[MetadataAttribute.Parameter("invoker", typeof(BasePlayer))]
 		[MetadataAttribute.Parameter("target", typeof(BasePlayer))]
+		[MetadataAttribute.Parameter("wants", typeof(bool))]
+		[MetadataAttribute.Parameter("reason", typeof(string))]
 
-		public class OnCarbonEmpowerPlayerStats : Patch;
+		public class OnCarbonMutePlayer : Patch;
 	}
 }
