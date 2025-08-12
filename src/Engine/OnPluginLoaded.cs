@@ -1,4 +1,5 @@
 ﻿using API.Hooks;
+using Carbon.Managers;
 using Oxide.Plugins;
 
 namespace Carbon.Hooks;
@@ -9,7 +10,7 @@ public partial class Category_Engine
 {
 	public partial class Engine_Hooks
 	{
-		[HookAttribute.Patch("OnPluginLoaded", "OnPluginLoaded")]
+		[HookAttribute.Patch("OnPluginLoaded", "OnPluginLoaded", typeof(ScriptLoader), "Compile")]
 		[HookAttribute.Options(HookFlags.MetadataOnly)]
 
 		[MetadataAttribute.Category("Engine")]
