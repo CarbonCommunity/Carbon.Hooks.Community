@@ -10,7 +10,7 @@ public partial class Category_Player
 {
 	public partial class Player_Hooks
 	{
-		[HookAttribute.Patch("OnWireClear", "OnWireClear", "WireTool", "AttemptClearSlot")]
+		[HookAttribute.Patch("OnWireClear", "OnWireClear", "WireTool", "AttemptClearSlot", ["BaseNetworkable", "BasePlayer", "System.Int32", "System.Boolean"])]
 		[MetadataAttribute.Category("Player")]
 		[MetadataAttribute.Info("Gets called when a player attempts to clear an IO slot.")]
 		[MetadataAttribute.Parameter("player", "BasePlayer")]
